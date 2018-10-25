@@ -1,0 +1,268 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif; }
+
+.taskOut, .taskIn {
+  display: none; }
+
+a {
+  color: #3C3C3E;
+  text-decoration: none; }
+
+.gradientRadius {
+  position: relative; }
+  .gradientRadius:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#09FF04, #23E3E3);
+    left: -2.7px;
+    top: -2.7px;
+    border: 2px solid transparent;
+    z-index: -4;
+    border-radius: 100px; }
+
+h2, h1 {
+  font-size: 14px; }
+
+.scale {
+  animation: scale   1s infinite; }
+
+.important {
+  color: #09FF04;
+  font-size: 20px; }
+
+.strike {
+  text-decoration: line-through;
+  text-decoration-style: #09FF04; }
+
+@keyframes trasperent {
+  from {
+    opacity: 0.1; }
+  to {
+    opacity: 0.9; } }
+
+@keyframes scale {
+  from {
+    transform: scale(0.4); }
+  to {
+    transform: scale(1.2); } }
+
+@keyframes moving {
+  from {
+    transform: translateX(0px); }
+  to {
+    transform: translateX(4px); } }
+
+.GeneralButton {
+  width: 40%;
+  margin: 0 auto;
+  position: relative;
+  padding: 1em 1.3em;
+  border-radius: 100px;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 4px 2px rgba(35, 227, 227, 0.671);
+  text-align: center; }
+  .GeneralButton:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#09FF04, #23E3E3);
+    left: -2.7px;
+    top: -2.7px;
+    border: 2px solid transparent;
+    z-index: -4;
+    border-radius: 100px;
+    animation: trasperent 1s infinite; }
+
+.GeneralButtonSmall {
+  margin: 2em auto;
+  position: relative;
+  padding: 0.4em 0.6em;
+  width: 34%;
+  border-radius: 100px;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 4px 2px rgba(35, 227, 227, 0.671);
+  text-align: center; }
+  .GeneralButtonSmall:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#09FF04, #23E3E3);
+    left: -2.5px;
+    top: -2.5px;
+    border: 1px solid transparent;
+    z-index: -4;
+    border-radius: 100px; }
+
+.GeneralButtonSmallest {
+  margin: 0 auto;
+  position: relative;
+  padding: 0.4em 0.6em;
+  width: 34%;
+  border-radius: 100px;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 4px 2px rgba(35, 227, 227, 0.671);
+  text-align: center; }
+  .GeneralButtonSmallest:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#09FF04, #23E3E3);
+    left: -2px;
+    top: -2px;
+    border: 1px solid transparent;
+    z-index: -4;
+    border-radius: 100px; }
+
+.seperator {
+  width: 70%;
+  margin: 3em auto;
+  display: block;
+  content: "";
+  height: 1px;
+  background-color: #09FF04; }
+
+.welcome {
+  height: 100vh;
+  text-align: center; }
+  .welcome .homeHeader {
+    text-align: left; }
+    .welcome .homeHeader img {
+      width: 70px;
+      margin: 0.5em; }
+  .welcome_welcomeAnimation {
+    width: 7em;
+    height: 7em;
+    border: 1px solid rgba(8, 255, 4, 0.726);
+    border-radius: 60%;
+    margin: 2em 0 2em  35%;
+    position: relative;
+    animation: scale 3s infinite; }
+    .welcome_welcomeAnimation:before {
+      content: "";
+      width: 4.5em;
+      height: 4.5em;
+      border: 1px solid rgba(35, 227, 227, 0.671);
+      border-radius: 60%;
+      display: block;
+      position: absolute;
+      top: 1.1em;
+      left: 1.2em;
+      animation: scale 3.1s infinite; }
+    .welcome_welcomeAnimation:after {
+      content: "";
+      width: 2.5em;
+      height: 2.5em;
+      border: 1px solid rgba(8, 255, 4, 0.726);
+      border-radius: 60%;
+      display: block;
+      position: absolute;
+      top: 2.1em;
+      left: 2.2em;
+      animation: scale 3.2s infinite; }
+  .welcome_welcomeNote {
+    font-size: 2em;
+    width: 60%;
+    margin: 2em auto;
+    line-height: 1.4em; }
+
+.taskIn {
+  position: relative;
+  height: 99vh; }
+  .taskIn_header {
+    text-align: right;
+    padding: 0.2em 2em;
+    border-radius: 100px;
+    background-color: white;
+    width: 90%;
+    margin: 1em auto; }
+    .taskIn_header span {
+      border: 1px solid #09FF04;
+      padding: 0 0.3em;
+      display: inline-block;
+      border-radius: 60px;
+      margin: 0.3px; }
+  .taskIn_error {
+    text-align: center;
+    color: #DC143C;
+    margin: 1em;
+    opacity: 0.7;
+    animation: scale 1.1s 3;
+    display: none; }
+  .taskIn_input {
+    width: 90%;
+    margin: 0 auto; }
+    .taskIn_input input[type="text"] {
+      width: 90%;
+      display: inline-block;
+      font-size: 2em;
+      border: none;
+      border-bottom: 1px solid #09FF04;
+      display: inline-block;
+      margin: 1em 0 0.4em  0; }
+      .taskIn_input input[type="text"]:focus {
+        outline: none; }
+    .taskIn_input input[type="checkbox"] {
+      display: inline-block;
+      width: 10%; }
+    .taskIn_input input[id="checkbox"] {
+      display: none; }
+      .taskIn_input input[id="checkbox"] + label {
+        padding: 0.3em;
+        padding-left: 30px;
+        margin: 1em 0;
+        display: inline-block;
+        background: url(../../images/iamge.png);
+        background-repeat: no-repeat; }
+      .taskIn_input input[id="checkbox"]:checked + label {
+        background: url(../../images/Group.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        padding: 0.3em;
+        padding-left: 30px; }
+  .taskIn_seeList {
+    position: absolute;
+    bottom: 10%;
+    width: 100%; }
+
+.taskOut {
+  height: 100vh; }
+  .taskOut_header {
+    text-align: right;
+    padding: 0 1em;
+    margin-bottom: 2em; }
+    .taskOut_header h1 {
+      font-size: 2.5em;
+      background: linear-gradient(rgba(8, 255, 4, 0.726), rgba(35, 227, 227, 0.671));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: lighter;
+      cursor: pointer; }
+  .taskOut_Item {
+    width: 96%;
+    margin: 0 auto; }
+    .taskOut_Item p {
+      display: inline-block;
+      width: 50%;
+      text-align: left; }
+    .taskOut_Item span {
+      display: inline-block;
+      width: 40%;
+      text-align: right; }
+      .taskOut_Item span i {
+        display: inline-block;
+        margin: 0 0.3em;
+        background: linear-gradient(rgba(8, 255, 4, 0.726), rgba(35, 227, 227, 0.671));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer; }
