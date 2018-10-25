@@ -222,10 +222,10 @@ h2, h1 {
         padding-left: 30px;
         margin: 1em 0;
         display: inline-block;
-        background: url(../../images/iamge.png);
+        background: url(../images/iamge.png);
         background-repeat: no-repeat; }
       .taskIn_input input[id="checkbox"]:checked + label {
-        background: url(../../images/Group.png);
+        background: url(../images/Group.png);
         background-repeat: no-repeat;
         display: inline-block;
         padding: 0.3em;
